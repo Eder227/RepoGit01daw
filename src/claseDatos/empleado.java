@@ -31,6 +31,8 @@ public class empleado {
 		
 	}
 	
+	
+
 	/**
 	 * @param dni
 	 * @param nombre
@@ -98,8 +100,13 @@ public class empleado {
 		return clubsocial;
 	}
 
+	
 	public void setClubsocial(boolean clubsocial) {
 		this.clubsocial = clubsocial;
+	}
+	
+	public void setClubsocial() {
+		this.clubsocial = sueldo > 2000;
 	}
 
 	public float getSueldo() {
@@ -110,5 +117,10 @@ public class empleado {
 		this.sueldo = sueldo;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "empleado [dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", categ=" + categ + ", edad="
+				+ edad + ", clubsocial=" + clubsocial + ", sueldo=" + sueldo + "]";
+	}
+}
 
